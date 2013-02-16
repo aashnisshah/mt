@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<h1>Multi-touch Demo</h1>
+		<canvas height="450" width="320" id="canvas"></canvas>
+		
+		<script type="text/javascript">
+			var canvase = document.getElementById('canvas');
+			var ctx = cavnas.getContext('2d');
+			
+			//stop mobile device from native scrolling away on the page
+			document.body.addEventListener('touchmove', function(event) {
+				event.preventDefault();
+			}, false);
+			
+			cavas.addEventListener('touchstart', function(event){
+				for(var i = 0; i < event.touches.length; i ++){
+					var touch = event.touches[i];
+					
+					var px = touch.pageX;
+					var py = touch.pageY;
+					
+					ctx.beginPath();
+					ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
+					
+					ctx.fillStyle = '#b9c7d3";
+					ctx.fill();
+					ctx.lineWidth = 2.0;
+					ctx.strokeStyle = "#397dbc';
+					ctx.stroke();
+				}
+			}, false);
+				
+				
+			canvas.addEventListener('touchmove', function(event) {
+				for(var i = 0; i < event.touches.length; i ++){
+					var touch = event.touches[i];
+					
+					var px = touch.pageX;
+					var py = touch.pageY;
+					
+					ctx.beginPath();
+					ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
+					
+					ctx.fillStyle = '#b9c7d3";
+					ctx.fill();
+					ctx.lineWidth = 2.0;
+					ctx.strokeStyle = "#899aaa';
+					ctx.stroke();
+				}
+			}, false);
+		</script>
+	</body>
+</html>
