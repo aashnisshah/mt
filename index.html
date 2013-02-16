@@ -16,6 +16,18 @@
 			  var ctx = canvas.getContext('2d');
 		
 			  //ctx.translate(-20, -20);
+			  
+			  // bee's data
+			  var bee = {
+					x: 50,
+					y: 50,
+					width: 50,
+					height: 50,
+					color: "rgb(255, 230, 0)"
+			  };
+			  
+			  // generating the bee
+		  	  rect(b.color, b.x, b.y, b.width, b.height);
 		
 			  // Stop mobile device from native scrolling away on the page
 			  document.body.addEventListener('touchmove', function (event) {
@@ -60,7 +72,7 @@
 	
 		  canvas.addEventListener('touchend', function () {
 				ctx.clearRect(0, 0, 320, 450);
-			  	rect("rgb(255, 230, 0)", 50, 50, 10, 10);
+			  	rect(b.color, b.x, b.y, b.width, b.height);
 		  }, false);
 		  
 		  // rotation
@@ -89,8 +101,7 @@
 				ctx.fill();
 		  }
 		  
-		  // generating the bee
-		  rect("rgb(255, 230, 0)", 50, 50, 10, 10);
+		  
       
       
     	</script>
