@@ -25,9 +25,6 @@
 					height: 50,
 					color: "rgb(255, 230, 0)"
 			  };
-			  
-			  // generating the bee
-		  	  rect(b.color, b.x, b.y, b.width, b.height);
 		
 			  // Stop mobile device from native scrolling away on the page
 			  document.body.addEventListener('touchmove', function (event) {
@@ -72,7 +69,7 @@
 	
 		  canvas.addEventListener('touchend', function () {
 				ctx.clearRect(0, 0, 320, 450);
-			  	rect(b.color, b.x, b.y, b.width, b.height);
+			  	rect("rgb(255, 230, 0)", 50, 50, 10, 10);
 		  }, false);
 		  
 		  // rotation
