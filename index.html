@@ -64,15 +64,16 @@
 		  
 		  
 		  // drawing a rectangle
-		  function rect(x,y,w,h) {
+		  function rect(c, x,y,w,h) {
 				ctx.beginPath();
+				ctx.fillStyle = "c";
 				ctx.rect(x,y,w,h);
 				ctx.closePath();
 				ctx.fill();
 		  }
 		  
 		  // generating the bee
-		  rect(50, 50, 10, 10);
+		  rect("rgb(150, 29, 28)", 50, 50, 10, 10);
       
       
     	</script>
