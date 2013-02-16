@@ -1,63 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,
-maximum-scale=1.0">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="main.css">
-
-        <title>Test</title>
-</head>
-<body>
-    <h1> Stuff </h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Multi-touch demo</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>Multi-touch demo</h1>
     <canvas height="450" width="320" id="canvas"></canvas>
-<script>
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
 
-        document.body.addEventListener('touchmove', function(e) {
-            evemt.preventDefault();
-        }, false);
-        
-        canvas.addEventListener('touchmove', function(e) {
-            for (var i = 0; i < event.touches.length; i++) {
-                var touch = event.touches[i];
+    <script type="text/javascript">
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
 
-                var px = touch.pageX;
-                var py = touch.pageY;
+      //ctx.translate(-20, -20);
 
-                ctx.beginPath();
-                ctx.arc(px, py, 30, 0, 2 * Math.PI, true);
+      // Stop mobile device from native scrolling away on the page
+      document.body.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+      }, false);
 
-                ctx.fillStyle = "#ffffff";
-                ctx.fill();
-                ctx.lineWidth = 5.0;
-                ctx.strokeStyle = "#000000";
-                ctx.stroke();
-            }
-        }, false);
-        
-        canvas.addEventListener('touchmove', function(e) {
-            for (var i = 0; i < event.touches.length; i++) {
-                var touch = event.touches[i];
+      canvas.addEventListener('touchstart', function (event) {
+        for (var i = 0; i < event.touches.length; i ++) {
+          var touch = event.touches[i];
 
-                var px = touch.pageX;
-                var py = touch.pageY;
+          var px = touch.pageX;
+          var py = touch.pageY;
 
-                ctx.beginPath();
-                ctx.arc(px, py, 30, 0, 2 * Math.PI, true);
+          ctx.beginPath();
+          ctx.arc(px, py, 30, 0, 2 * Math.PI, true);
 
-                ctx.fillStyle = "#b9c7d3";
-                ctx.fill();
-                ctx.lineWidth = 2.0;
-                ctx.strokeStyle = "#099aaa";
-                ctx.stroke();
-            }
-        });
-        canvas.addEventListener('touchend', function () {
-            ctx.clearRect(0, 0, 320, 450);
-        }, false);
+          ctx.fillStyle = '#65a8e4';
+          ctx.fill();
+          ctx.lineWidth = 5.0;
+          ctx.strokeStyle = '#367dbc';
+          ctx.stroke();
+        }
+      }, false);
+
+      canvas.addEventListener('touchmove', function (event) {
+        for (var i = 0; i < event.touches.length; i ++) {
+          var touch = event.touches[i];
+
+          var px = touch.pageX;
+          var py = touch.pageY;
+
+          ctx.beginPath();
+          ctx.arc(px, py, 20, 0, 2 * Math.PI, true);
+
+          ctx.fillStyle = '#b9c7d3';
+          ctx.fill();
+          ctx.lineWidth = 2.0;
+          ctx.strokeStyle = '#899aaa';
+          ctx.stroke();
+        }
+      }, false);
+
+      canvas.addEventListener('touchend', function () {
+        ctx.clearRect(0, 0, 320, 450);
+      }, false);
     </script>
-</body>
+  </body>
 </html>
