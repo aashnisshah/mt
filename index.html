@@ -27,6 +27,156 @@
 					height: 50,
 					color: "rgb(255, 230, 0)"
 			  };
+			  
+			  mazeArray[16][16];
+			  
+			  function mazeSetup(){
+			  	var mazeX = 0;
+			  	var mazeY = 0;
+			  	var mazeWall = "rgb(83, 58, 208)"
+			  	var mazePath = "rgb(58, 163, 208)"
+			  	
+			  	for( var i = 0; i <= 15; i++){
+			  		for( var j = 0; j <= 15; j++){
+			  			if(mazeArray[i][j] == "wall"){
+			  				rect(mazeWall, mazeX, mazeY, 16, 16);
+			  			} else {
+			  				rect(mazePath, mazeX, mazeY, 16, 16);
+			  			}
+			  		}
+			  	}
+			  };
+			  
+			  mazeSetup();
+			  
+			  var mazeWall = {
+			  	mazeArray[1][0] = "wall";
+			  	mazeArray[1][1] = "wall";
+			  	mazeArray[1][2] = "wall";
+			  	mazeArray[1][3] = "wall";
+			  	mazeArray[1][4] = "wall";
+			  	mazeArray[1][5] = "wall";
+			  	mazeArray[1][6] = "wall";
+			  	mazeArray[1][7] = "wall";
+			  	mazeArray[1][8] = "wall";
+			  	mazeArray[1][9] = "wall";
+			  	mazeArray[1][10] = "wall";
+			  	mazeArray[1][11] = "wall";
+			  	mazeArray[1][12] = "wall";
+			  	mazeArray[1][13] = "wall";
+			  	mazeArray[1][14] = "wall";
+			  	mazeArray[2][0] = "wall";
+			  	mazeArray[2][1] = "wall";
+			  	mazeArray[2][14] = "wall";
+			  	mazeArray[3][0] = "wall";
+			  	mazeArray[3][1] = "wall";
+			  	mazeArray[3][3] = "wall";
+			  	mazeArray[3][4] = "wall";
+			  	mazeArray[3][5] = "wall";
+			  	mazeArray[3][6] = "wall";
+			  	mazeArray[3][7] = "wall";
+			  	mazeArray[3][8] = "wall";
+			  	mazeArray[3][9] = "wall";
+			  	mazeArray[3][10] = "wall";
+			  	mazeArray[3][11] = "wall";
+			  	mazeArray[3][12] = "wall";
+			  	mazeArray[3][14] = "wall";
+			  	mazeArray[4][0] = "wall";
+			  	mazeArray[4][1] = "wall";
+			  	mazeArray[4][6] = "wall";
+			  	mazeArray[4][7] = "wall";
+			  	mazeArray[4][8] = "wall";
+			  	mazeArray[4][9] = "wall";
+			  	mazeArray[4][10] = "wall";
+			  	mazeArray[4][11] = "wall";
+			  	mazeArray[4][12] = "wall";
+			  	mazeArray[4][14] = "wall";
+			  	mazeArray[5][0] = "wall";
+			  	mazeArray[5][1] = "wall";
+			  	mazeArray[5][2] = "wall";
+			  	mazeArray[5][3] = "wall";
+			  	mazeArray[5][4] = "wall";
+			  	mazeArray[5][6] = "wall";
+			  	mazeArray[5][14] = "wall";
+			  	mazeArray[6][0] = "wall";
+			  	mazeArray[6][6] = "wall";
+			  	mazeArray[6][8] = "wall";
+			  	mazeArray[6][9] = "wall";
+			  	mazeArray[6][10] = "wall";
+			  	mazeArray[6][11] = "wall";
+			  	mazeArray[6][12] = "wall";
+			  	mazeArray[6][13] = "wall";
+			  	mazeArray[6][14] = "wall";
+			  	mazeArray[7][2] = "wall";
+			  	mazeArray[7][3] = "wall";
+			  	mazeArray[7][4] = "wall";
+			  	mazeArray[7][5] = "wall";
+			  	mazeArray[7][6] = "wall";
+			  	mazeArray[7][8] = "wall";
+			  	mazeArray[7][14] = "wall";
+			  	mazeArray[8][1] = "wall";
+			  	mazeArray[8][2] = "wall";
+			  	mazeArray[8][6] = "wall";
+			  	mazeArray[8][8] = "wall";
+			  	mazeArray[8][10] = "wall";
+			  	mazeArray[8][11] = "wall";
+			  	mazeArray[8][12] = "wall";
+			  	mazeArray[8][14] = "wall";
+			  	mazeArray[9][1] = "wall";
+			  	mazeArray[9][2] = "wall";
+			  	mazeArray[9][4] = "wall";
+			  	mazeArray[9][6] = "wall";
+			  	mazeArray[9][8] = "wall";
+			  	mazeArray[9][10] = "wall";
+			  	mazeArray[9][11] = "wall";
+			  	mazeArray[9][12] = "wall";
+			  	mazeArray[10][4] = "wall";
+			  	mazeArray[10][6] = "wall";
+			  	mazeArray[10][8] = "wall";
+			  	mazeArray[10][10] = "wall";
+			  	mazeArray[10][11] = "wall";
+			  	mazeArray[10][12] = "wall";
+			  	mazeArray[10][13] = "wall";
+			  	mazeArray[10][14] = "wall";
+			  	mazeArray[10][15] = "wall";
+			  	mazeArray[11][0] = "wall";
+			  	mazeArray[11][2] = "wall";
+			  	mazeArray[11][3] = "wall";
+			  	mazeArray[11][4] = "wall";
+			  	mazeArray[11][6] = "wall";
+			  	mazeArray[11][8] = "wall";
+			  	mazeArray[11][11] = "wall";
+			  	mazeArray[12][0] = "wall";
+			  	mazeArray[12][6] = "wall";
+			  	mazeArray[12][8] = "wall";
+			  	mazeArray[12][9] = "wall";
+			  	mazeArray[12][11] = "wall";
+			  	mazeArray[12][13] = "wall";
+			  	mazeArray[12][14] = "wall";
+			  	mazeArray[13][0] = "wall";
+			  	mazeArray[13][2] = "wall";
+			  	mazeArray[13][3] = "wall";
+			  	mazeArray[13][4] = "wall";
+			  	mazeArray[13][5] = "wall";
+			  	mazeArray[13][6] = "wall";
+			  	mazeArray[13][11] = "wall";
+			  	mazeArray[13][13] = "wall";
+			  	mazeArray[14][0] = "wall";
+			  	mazeArray[14][2] = "wall";
+			  	mazeArray[14][3] = "wall";
+			  	mazeArray[14][4] = "wall";
+			  	mazeArray[14][5] = "wall";
+			  	mazeArray[14][6] = "wall";
+			  	mazeArray[14][7] = "wall";
+			  	mazeArray[14][8] = "wall";
+			  	mazeArray[14][9] = "wall";
+			  	mazeArray[14][10] = "wall";
+			  	mazeArray[14][11] = "wall";
+			  	mazeArray[14][13] = "wall";
+			  	mazeArray[14][15] = "wall";
+			  	mazeArray[15][0] = "wall";
+			  	mazeArray[15][13] = "wall";
+			  };
 		
 			  // Stop mobile device from native scrolling away on the page
 			  document.body.addEventListener('touchmove', function (event) {
