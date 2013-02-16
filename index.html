@@ -8,7 +8,7 @@
     	<link rel="stylesheet" href="main.css">
   	</head>
   	<body>
-    	<h1>Multi-touch demo</h1>
+    	Touch to start!
     	<canvas height="450" width="320" id="canvas"></canvas>
 
 		<script type="text/javascript">
@@ -69,7 +69,7 @@
 	
 		  canvas.addEventListener('touchend', function () {
 				ctx.clearRect(0, 0, 320, 450);
-			  	rect("rgb(255, 230, 0)", 50, 50, 10, 10);
+			  	rect("rgb(255, 230, 0)", bee.x, bee.y, bee.width, bee.height);
 		  }, false);
 		  
 		  // rotation
