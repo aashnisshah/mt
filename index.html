@@ -9,18 +9,52 @@
   	</head>
 		<body>
 
-		<canvas id="myCanvas" width="100%" height="100%" style="border:1px solid #d3d3d3;">
-		Your browser does not support the HTML5 canvas tag.</canvas>
+		<canvas id="myCanvas" height="450" width="320" id="canvas"></canvas>
 		
 		<script type="text/javascript">
 		
 			var c=document.getElementById("myCanvas");
 			var ctx=c.getContext("2d");
-			ctx.beginPath();
-			ctx.fillStyle = "5E2AB9";
-			ctx.arc(50, 50, 40, 0, 2*Math.PI);
-			ctx.fill();
-			ctx.stroke();
+			
+			setup();
+			
+			function setup(){
+				// draw the circles
+				drawCircle();
+			};
+			
+			
+			function drawCircle(){
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(50, 50, 30, 0, 2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+				
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(100, 110, 30, 0, 2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+				
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(50, 170, 30, 0, 2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+				
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(150, 50, 30, 0, 2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+				
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(150, 170, 30, 0, 2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+			};
 			
 			
 			  
