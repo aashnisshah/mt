@@ -28,20 +28,7 @@
 					color: "rgb(255, 230, 0)"
 			  };
 			  
-			  var circleSettings = {
-			  		fillStyle = "#5E2AB9";
-			  		
-			  };
-			  
-			  drawCircles();
-			  
-			  function drawCircles = {
-			  		ctx.beginPath();
-			  		ctx.cillStyle = "5E2AB9";
-			  		ctx.arc(95, 50, 40, 0, 2*Math.PI);
-			  		ctx.stroke();
-			  }
-		
+			  /*
 			  // Stop mobile device from native scrolling away on the page
 			  document.body.addEventListener('touchmove', function (event) {
 				event.preventDefault();
@@ -103,6 +90,8 @@
 			  event.preventDefault();
 			  return false;
 			});
+			
+			*/
 		  
 		  
 		  // drawing a rectangle
@@ -114,11 +103,23 @@
 				ctx.fill();
 		  }
 		  
+		  
+			  
+		  drawCircles();
+		  
+		  function drawCircles = {
+				ctx.beginPath();
+				ctx.fillStyle = "5E2AB9";
+				ctx.arc(20, 20, 40, 0, 2*Math.PI);
+				ctx,fill();
+				ctx.stroke();
+		  }
+		  
 		  // set up the game
 		  function Setup(){
 		  	// create the bee
 		  	rect(bee.color, bee.x, bee.y, bee.width, bee.height);
-		  	
+		  	drawCircles();
 		  }
 		  
 		  
