@@ -1,17 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  	<head>
+	<head>
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     	<meta name="apple-mobile-web-app-capable" content="yes">
     	<title>Multi-touch demo</title>
     	<link rel="stylesheet" href="main.css">
   	</head>
-  	<body>
-    	Touch to start!
-    	<canvas height="450" width="320" id="canvas"></canvas>
-    
-		<script>
+		<body>
+
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+		Your browser does not support the HTML5 canvas tag.</canvas>
+		
+		<script type="text/javascript">
+		
 			var c=document.getElementById("myCanvas");
 			var ctx=c.getContext("2d");
 			ctx.beginPath();
@@ -19,9 +21,10 @@
 			ctx.arc(50, 50, 40, 0, 2*Math.PI);
 			ctx.fill();
 			ctx.stroke();
-			ctx.stroke();
+			
+			
 			  
-			  /*
+			  
 			  // Stop mobile device from native scrolling away on the page
 			  document.body.addEventListener('touchmove', function (event) {
 				event.preventDefault();
@@ -84,13 +87,9 @@
 			  return false;
 			});
 			
-			*/
-		  
-		  
-		  
-		  
-      
-      
-    	</script>
-	</body>
+			
+		
+		</script> 
+
+</body>
 </html>
